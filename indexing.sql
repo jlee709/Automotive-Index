@@ -68,16 +68,20 @@ CREATE DATABASE indexed_cars;
 
 
 
-CREATE make_title INDEX ON (car_models);
+-- CREATE INDEX ON car_models(make_code);
+
+-- \timing
+-- SELECT DISTINCT(make_code) FROM car_models WHERE make_code LIKE 'LAM';  --time 1.56ms
+-- \timing
+
+
+
+CREATE INDEX ON make_code(model_code);
 
 \timing
-SELECT DISTINCT(make_title) FROM car_models WHERE make_code LIKE 'LAM%';
+  SELECT model_title FROM car_models WHERE make_code LIKE 'NISSAN%' AND model_code LIKE 'GT-R%';
+  -- Time: 41.697 ms
 \timing
-
-
-
-
-
 
 
 

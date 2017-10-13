@@ -5,7 +5,7 @@
 When connecting to your pg database, connect from this project directory.
 
 To run sql statements from an external file, use the `\i [filepath]` command.
-
+dwf
 ## Setting up
 
 1. Create a new postgres user named `indexed_cars_user`

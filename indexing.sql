@@ -76,12 +76,13 @@ CREATE DATABASE indexed_cars;
 
 
 
-CREATE INDEX ON make_code(model_code);
+-- CREATE INDEX ON car_models(model_code);
 
-\timing
-  SELECT model_title FROM car_models WHERE make_code LIKE 'NISSAN%' AND model_code LIKE 'GT-R%';
-  -- Time: 41.697 ms
-\timing
+-- \timing
+--   SELECT model_title FROM car_models WHERE make_code = 'NISSAN' AND model_code = 'GT-R';
+--   -- Time: 41.697 ms
+--   -- Indexed Time: 1.47ms
+-- \timing
 
 
 
